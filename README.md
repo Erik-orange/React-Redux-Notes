@@ -85,15 +85,17 @@ ___
     auth: authenticationReducer,
     notes: notesReducer
   });
-```
+  ```
 
 ## Redux: Send Action Data to the Store
 
 * 
 
+## Redux: Use Middleware to Handle Asynchronous Actions
 
+* Redux provides middleware designed specifically for asynchronous requests, called Redux Thunk middleware. 
 
-
+* To include Redux Thunk middleware, you pass it as an argument to `Redux.applyMiddleware()`. This statement is then provided as a second optional parameter to the `createStore()` function.
 
 
 
