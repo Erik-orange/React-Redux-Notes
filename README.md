@@ -76,9 +76,20 @@ ___
 
   The root `reducer` is then passed into the Redux `createStore()` method.
   
-*  Redux provides the `combineReducers()` method, it accepts an object as an argument in which you define properties which associate keys to specific reducer functions. The name you give to the keys will be used by Redux as the name for the associated piece of `state`.
+*  Redux provides the `combineReducers()` method, it accepts an object as an argument in which you define properties which associate keys to specific reducer functions. 
 
+  The name you give to the keys will be used by Redux as the name for the associated piece of `state`.
 
+  ```js
+  const rootReducer = Redux.combineReducers({
+    auth: authenticationReducer,
+    notes: notesReducer
+  });
+```
+
+## Redux: Send Action Data to the Store
+
+* 
 
 
 
