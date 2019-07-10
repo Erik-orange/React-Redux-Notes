@@ -100,7 +100,20 @@ ___
 * To include Redux Thunk middleware, you pass it as an argument to `Redux.applyMiddleware()`. This statement is then provided as a second optional parameter to the `createStore()` function.
 
 
+## Redux: Never Mutate State
 
+* Immutable state means that you never modify state directly, instead, you return a new copy of state.
+
+   This immutability, in fact, is what provides such features as time-travel debugging that you may have heard about.
+   
+* Redux does not actively enforce state immutability in its store or reducers, that responsibility falls on the programmer.
+
+## Use the Spread Operator on Arrays
+
+
+## Remove an Item from an Array
+
+## Copy an Object with Object.assign
 
 
 
