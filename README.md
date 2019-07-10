@@ -72,7 +72,7 @@ ___
 
 ## Redux: Combine Multiple Reducers
 
-* Redux provides reducer composition as a solution for a complex state model. You define multiple reducers to handle different pieces of your application's `state`, then compose these reducers together into one root reducer. 
+* Redux provides `reducer` composition as a solution for a complex `state` model. You define multiple reducers to handle different pieces of your application's `state`, then compose these reducers together into one root `reducer`. 
 
   The root `reducer` is then passed into the Redux `createStore()` method.
   
@@ -86,6 +86,8 @@ ___
     notes: notesReducer
   });
   ```
+    
+    The `auth` and `notes` keys will each hold the `state` associated with it and handled by the `authenticationReducer` and `notesReducer` reducers respectively.
 
 ## Redux: Send Action Data to the Store
 
