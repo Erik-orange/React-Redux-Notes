@@ -87,7 +87,7 @@ ___
   });
   ```
     
-    The `auth` and `notes` keys will each hold the `state` associated with it and handled by the `authenticationReducer` and `notesReducer` reducers respectively.
+   The `auth` and `notes` keys will each hold the `state` associated with it and handled by the `authenticationReducer` and `notesReducer` reducers respectively.
 
 ## Redux: Send Action Data to the Store
 
