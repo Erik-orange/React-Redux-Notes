@@ -177,9 +177,21 @@ ___
 
 ___
 
-## Manage State Locally First
+## Use Provider to Connect Redux to React
 
-* 
+* React Redux provides a small API with two key features: `Provider` and `connect`. 
 
+  The `Provider` is a wrapper component from React Redux that wraps your React app. 
+  
+  This wrapper then allows you to access the Redux `store` and `dispatch` functions throughout your component tree. 
+  
+  `Provider` takes two props: The Redux store and the child components of your app. 
+  
+  Defining the `Provider` for an App component might look like this:
+  ```js
+  <Provider store={store}>
+    <App/>
+  </Provider>
+  ```
 ___
 
