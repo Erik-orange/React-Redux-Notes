@@ -154,7 +154,7 @@ ___
   ```js
   const newObject = Object.assign({}, obj1, obj2);
   ```
-  This creates `newObject` as a new `object`, which contains the properties that currently exist in `obj1` and `obj2`.
+  This creates `newObject` as a new `object`, which contains the properties that currently exist in `obj1` and `obj2`. Mapping the properties from `obj2` onto `obj1` first, and then mapping the properties from `obj1` onto the empty object argument, `{}`.
 
 
 
