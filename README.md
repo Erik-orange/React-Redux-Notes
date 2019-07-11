@@ -130,12 +130,31 @@ ___
 
 ## Use the Spread Operator on Arrays
 
+* One solution from ES6 to help enforce state immutability in Redux is the spread operator: `...`. 
+
+  The spread operator has a variety of applications, one of which is well-suited to the previous challenge of producing a new array from an existing array. 
+  
+* The `...` effectively spreads out the values in an array into a new array, this is great for cloning arrays.
+
+  But it's important to note that it only makes a shallow copy of the array. That is to say, it only provides immutable array operations for one-dimensional arrays.
+___
 
 ## Remove an Item from an Array
 
+* Removing items from an array without mutating `state` requires usage of the spread operator, `...`, as well as the `slice()` and `concat()` array methods.
+___
+
 ## Copy an Object with Object.assign
 
+* `Object.assign()` takes a target object and source objects and maps properties from the source objects to the target object. 
 
+  Any matching properties are overwritten by properties in the source objects. This behavior is commonly used to make shallow copies of objects by passing an empty object as the first argument followed by the object(s) you want to copy. 
+  
+  Here's an example:
+  ```js
+  const newObject = Object.assign({}, obj1, obj2);
+  ```
+  This creates `newObject` as a new `object`, which contains the properties that currently exist in `obj1` and `obj2`.
 
 
 
