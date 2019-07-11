@@ -20,7 +20,16 @@ ___
   
   Redux will pass this function the current state of the `store`, and the `action` you dispatched, expecting an updated state object to be returned: `(state, action) => newState`. We call this function a `reducer` function.
   
-* In a React Redux app, you create a single Redux `store` that manages the `state` of your entire app. Your React components subscribe to only the pieces of data in the `store` that are relevant to their role. Then, you `dispatch` actions directly from React components, which then trigger `store` updates.
+* `Provider` - React Redux exposes the `Provider` component to handle passing our store to every container component. We'll generally use this to wrap the root component of our app, e.g. `<Provider store={store}> ... </Provider>`.
+
+* `connect(mapStateToProps)(Component) => Component` - We use `connect()` to access the state of our `store` in our container components.
+
+  Call `connect(mapStateToProps)` with a function that takes the state of the store, mapping it to props to be passed into our container component, `(state) => props`. 
+
+  Calling `connect()` returns another function, which we should then call with our container component, `connect(...)(Component)`, to get a "connected" component. This connected component will automatically have a `dispatch` prop (for dispatching actions), and the result of `mapStateToProps` will be merged into the component's props.
+
+  
+* In a React Redux app, you create a single Redux `store` that manages the `state` of your entire app. Your React components `subscribe` to only the pieces of data in the `store` that are relevant to their role. Then, you `dispatch` the `actions` directly from React components, which then trigger `store` updates.
 
 ___
 
