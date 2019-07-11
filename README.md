@@ -169,5 +169,17 @@ ___
   
   It does so by mapping the properties from `obj2` onto `obj1` first, and then mapping the properties from `obj1` onto the empty object argument, `{}`.
 
+___
 
+## Getting Started with React Redux
+
+* Because Redux is not designed to work with React out of the box, you need to use the `react-redux` package. It provides a way for you to pass Redux `state` and `dispatch` to your React components as `props`.
+
+___
+
+## Manage State Locally First
+
+* 
+
+___
 
