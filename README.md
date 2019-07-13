@@ -227,11 +227,12 @@ ___
 
 ### Connect Redux to React
 
-* 
+* The `connect()` method from React Redux allows you to use the `mapStateToProps()` and `mapDispatchToProps()` functions to map `state` and `dispatch` onto the `props` of one of your React components.
 
+  ```js
+  connect(mapStateToProps, mapDispatchToProps)(MyComponent);
+  ```
+  
+Presentational React components are not directly connected to Redux. They are simply responsible for the presentation of UI and do this as a function of the props they receive. 
 
-
-
-
-
-
+By contrast, Container components are connected to Redux. These are typically responsible for dispatching actions to the store and often pass store state to child components as props.
