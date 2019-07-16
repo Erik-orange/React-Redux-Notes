@@ -281,6 +281,8 @@ Presentational React components are not directly connected to Redux. They are si
 
 By contrast, Container components are connected to Redux. These are typically responsible for dispatching actions to the store and often pass store state to child components as props.
 
+___
+
 ### Generator Functions
 ```
 function* myGenerator() {
