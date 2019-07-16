@@ -6,6 +6,13 @@ ___
 
 ### Redux Basics
 
+* Installing
+
+  ```
+  npm i redux --save-dev
+  npm i react-redux --save-dev
+  ```
+
 * `Smart/Container Components`
 
   Containers are application-logic-specific components aware of the data and logic unique to your application. Containers pass data and callbacks as `props` to presentational components, and handle updating the data when a user interacts with the app.
@@ -52,6 +59,16 @@ ___
 
 * In a React Redux app, you create a single Redux `store` that manages the `state` of your entire app. Your React components `subscribe` to only the pieces of data in the `store` that are relevant to their role. Then, you `dispatch` the `actions` directly from React components, which then trigger `store` updates.
 
+* State management: React Hooks or React Redux
+
+* Async actions: Redux Thunk or Redux Sagas
+
+* In Redux, the `state` is usually defined as an Array or an Object.
+
+  - If `state` is in an Array: `concat()`, `slice()`, `...` operator
+  
+  - If `state` is in an Object: `Object.assign( {}, obj1, obj2 )
+
 ___
 
 ### Redux: Create a Redux Store
@@ -63,7 +80,14 @@ ___
   There is a method called `createStore()` on the Redux object, which you use to create the Redux `store`. 
   
   This method takes a `reducer` function as a required argument. It simply takes `state` as an argument and returns `state`.
+  
+* Redux Store API
 
+  ```
+  store.subscribe();
+  store.dispatch();
+  store.getState();
+  ```
 
 ### Redux: Get State from the Redux Store
 
@@ -151,6 +175,7 @@ ___
 
 * To include Redux Thunk middleware, you pass it as an argument to `Redux.applyMiddleware()`. This statement is then provided as a second optional parameter to the `createStore()` function.
 
+* You can access `store.getState()` and `store.dispatch()` from inside middleware functions by passing them as parameters.
 
 ### Redux: Never Mutate State
 
