@@ -283,7 +283,25 @@ By contrast, Container components are connected to Redux. These are typically re
 
 ___
 
-### Generator Functions
+### Redux Sagas & Generator Functions
+
+Generator functions in JavaScript are functions which can be paused and resumed on demand. 
+
+What is a Saga? 
+  - a worker function
+  - a watcher function
+
+Redux Saga relies heavily on generator functions but the good thing is that you won’t need to call `next()` in your code. redux saga handles that for you under the hood.
+
+The watcher is basically a generator function “watching” for every action we are interested in. 
+
+In response to that action, the watcher will call a worker saga, which is another generator function for doing the actual API call.
+
+The worker saga will call the remote API with the call method from redux-saga/effects. 
+
+When the data is loaded we can dispatch another action from our saga with the `put` method, again, from redux-saga/effects.
+
+**Example**
 ```
 function* myGenerator() {
   for(let i = 1; i < 3; i++) {
