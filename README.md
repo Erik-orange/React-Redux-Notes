@@ -15,7 +15,7 @@ ___
 
 * `Smart/Container Components`
 
-  Containers are application-logic-specific components aware of the data and logic unique to your application. Containers pass data and callbacks as `props` to presentational components, and handle updating the data when a user interacts with the app.
+  Containers are application-logic-specific components aware of the data and logic unique to your application. Containers pass data and callbacks as **`props`** to presentational components, and handle updating the data when a user interacts with the app.
   
   They're usually just called "containers". You may also hear "smart" components, or occasionally, View-Controllers.
 
